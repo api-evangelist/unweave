@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/unweave/cli
+name: unweave
+description: >-
+  First-party CLI for Unweave ("Supabase for Machine Learning") — creates and
+  manages GPU-backed ML dev environments (sessions/execs), projects, volumes,
+  SSH keys, endpoints, and evals against the Unweave platform API. Written in
+  Go; released with GoReleaser. Latest release v0.1.40 (project dormant on
+  GitHub since mid-2023).
+install:
+  - method: homebrew
+    command: brew install unweave/unweave/unweave
+  - method: github-releases
+    command: Download from https://github.com/unweave/cli/releases (darwin/linux, amd64/arm64)
+auth:
+  - unweave login / unweave logout (token stored locally; CLI talks to the hosted Unweave API)
+commands:
+  - group: auth
+    commands: [login, logout]
+  - group: projects
+    commands: [link]
+    notes: Link a local directory to an Unweave project (config in .unweave/).
+  - group: sessions-and-execs
+    commands: [session, exec, box, code, ssh, logs, copy]
+    notes: Create/manage GPU sessions and execs, open VS Code, SSH in, stream logs, copy files.
+  - group: builds-and-deploys
+    commands: [build, deploy, endpoints, evals]
+    notes: Build images, deploy endpoints, run evals against endpoint versions.
+  - group: infrastructure
+    commands: [provider, volume, keys]
+    notes: Select GPU providers, manage persistent volumes and SSH keys.
+source_layout:
+  commands_dir: https://github.com/unweave/cli/tree/master/cmd
+  api_client_dir: https://github.com/unweave/cli/tree/master/client

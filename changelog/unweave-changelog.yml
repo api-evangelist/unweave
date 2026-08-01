@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.unweave.io/changelog
+scheme: dated-posts
+current_cli_version: 0.1.40
+notes: >-
+  Unweave publishes a dated changelog on its website (Next.js posts). Three
+  entries exist, all from May-June 2023; no entries have been published since,
+  consistent with the GitHub org going dormant in August 2023. CLI releases
+  (GitHub Releases, GoReleaser) reached v0.1.40.
+entries:
+  - date: '2023-06-16'
+    title: Changelog 3
+    highlights:
+      - Persistence with Unweave Volumes
+    url: https://www.unweave.io/changelog/16-06-2023
+  - date: '2023-06-02'
+    title: Changelog 2
+    highlights:
+      - Multi-GPU support
+      - Hardware Spec
+      - Copy Command
+    url: https://www.unweave.io/changelog/02-06-2023
+  - date: '2023-05-26'
+    title: Changelog 1
+    highlights:
+      - Public beta
+      - unweave ssh
+      - VS Code support
+      - Docs website
+    url: https://www.unweave.io/changelog/26-05-2023

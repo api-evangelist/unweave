@@ -1,8 +1,27 @@
 aid: unweave
 name: Unweave
-description: Unweave is a company surfaced as a portfolio company of speedinvest and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Unweave is a London-based developer platform that describes itself as
+  "Supabase for Machine Learning" — open source machine learning development
+  environments with serverless GPU sessions, persistent volumes, SSH/VS Code
+  access, project linking, and bring-your-own-cloud provider support (e.g.
+  LambdaLabs), driven by a first-party CLI. Backed by Speedinvest. The platform
+  is open source (Go) on GitHub, but development has been dormant since
+  mid-2023: the docs and API hosts are offline while the marketing site, blog,
+  changelog, and pricing pages remain up.
 url: https://raw.githubusercontent.com/api-evangelist/unweave/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://unweave.io/meta-image.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,12 +30,61 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
-- Company
+- Machine Learning
+- GPU Compute
+- Developer Tools
+- MLOps
+- Cloud Infrastructure
+- Serverless
+- Development Environments
+- Artificial Intelligence
 apis: []
+common:
+- type: DomainSecurity
+  url: security/unweave-domain-security.yml
+- type: Website
+  url: https://www.unweave.io/
+- type: Blog
+  url: https://www.unweave.io/blog
+- type: ChangeLog
+  url: https://www.unweave.io/changelog
+- type: ChangeLog
+  name: Changelog artifact
+  url: changelog/unweave-changelog.yml
+- type: Pricing
+  url: https://www.unweave.io/pricing
+- type: TermsOfService
+  url: https://www.unweave.io/tos
+- type: PrivacyPolicy
+  url: https://www.unweave.io/privacy
+- type: Support
+  name: Discord community
+  url: https://discord.gg/ydyVHbFjPt
+- type: GitHubOrganization
+  url: https://github.com/unweave
+- type: Twitter
+  url: https://twitter.com/unweaveio
+- type: Documentation
+  name: Docs source (docs.unweave.io is offline)
+  url: https://github.com/unweave/unweave-v1/tree/master/docs/src/pages/docs
+- type: CLI
+  url: cli/unweave-cli.yml
+- type: Packages
+  url: packages/unweave-packages.yml
+- type: SDKs
+  name: Go client library (CLI client package)
+  url: packages/unweave-packages.yml
+- type: LLMsTxt
+  url: llms/unweave-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
