@@ -1,13 +1,21 @@
 generated: '2026-07-21'
 method: searched
 host: https://www.unweave.io
-notes: >-
-  No /.well-known/ discovery documents are published on the Unweave website
-  host. The API host (api.unweave.io) returns HTTP 525 (Cloudflare SSL
-  handshake failure — origin offline) and the docs host (docs.unweave.io)
-  returns 404, so neither could serve a discovery surface. Absence recorded
-  as valid probe data; no rating pointer is wired for this artifact.
-documents:
+notes: No /.well-known/ discovery documents are published on the Unweave website host. The API host (api.unweave.io)
+  returns HTTP 525 (Cloudflare SSL handshake failure — origin offline) and the docs host (docs.unweave.io)
+  returns 404, so neither could serve a discovery surface. Absence recorded as valid probe data; no rating
+  pointer is wired for this artifact.
+other_hosts:
+- host: https://api.unweave.io
+  status: 525
+  note: Cloudflare error 525 — origin SSL handshake failure; API host offline.
+- host: https://docs.unweave.io
+  status: 404
+- host: https://app.unweave.io
+  status: 404
+hosts:
+- host: https://www.unweave.io
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -18,11 +26,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
-other_hosts:
-  - host: https://api.unweave.io
-    status: 525
-    note: Cloudflare error 525 — origin SSL handshake failure; API host offline.
-  - host: https://docs.unweave.io
-    status: 404
-  - host: https://app.unweave.io
-    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
