@@ -43,7 +43,7 @@ specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-21'
 tags:
-- Machine-Learning
+- Machine Learning
 - GPU Compute
 - Developer Tools
 - MLOps
@@ -60,6 +60,7 @@ tags_raw:
 - Serverless
 - Development Environments
 - Artificial Intelligence
+- Machine-Learning
 apis: []
 common:
 - type: DomainSecurity
