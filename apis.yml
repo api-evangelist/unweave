@@ -63,6 +63,8 @@ tags_raw:
 - Machine-Learning
 apis: []
 common:
+- type: Plans
+  url: plans/unweave-plans-pricing.yml
 - type: DomainSecurity
   url: security/unweave-domain-security.yml
 - type: Website
