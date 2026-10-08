@@ -38,3 +38,25 @@ plans:
 rate_limit_statements:
 - Up to 5 concurrent sessions
 - 5 active SSH sessions at any given time
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - hybrid
+  units: []
+  plans:
+  - name: Free forever
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods:
+    - month
+  - name: Developer
+    access: other
+    model: hybrid
+    model_how: derived
+    units: []
+    periods:
+    - month
