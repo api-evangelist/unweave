@@ -1,0 +1,40 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.unweave.io/pricing
+sources:
+- https://www.unweave.io/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Developer
+published: true
+note: Beta pricing; page notes pricing likely to change but free plan stays free.
+plan_count: 2
+currency: USD
+plans:
+- name: Free forever
+  price_text: $ 0 / month
+  price: 0
+  currency: USD
+  period: month
+  included_quota: Up to 3 projects; Up to 5 concurrent sessions (5 active SSH sessions at any given time);
+    Bring your own cloud providers; No payment required
+- name: Developer
+  price_text: $ 50 / month + usage
+  price: 50
+  currency: USD
+  period: month
+  included_quota: Unlimited projects and sessions; Hosted Unweave cloud provider; Auto-select cheapest
+    provider; Pre-paid and usage based
+  overage: + usage
+rate_limit_statements:
+- Up to 5 concurrent sessions
+- 5 active SSH sessions at any given time
